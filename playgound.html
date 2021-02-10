@@ -22,23 +22,39 @@
       }
       div {
         margin: 50px;
-        border: 3px red solid;
+        /* border: 3px red solid; */
       }
       span.larger {
         font-size: 40pt;
       }
-      a:visited{
-          color:black;
-          /* text-decoration: none; */
+      a:visited {
+        color: black;
+        /* text-decoration: none; */
       }
-      a:hover{
-          background-color: yellow;
-          text-decoration: none;
+      a:hover {
+        background-color: yellow;
+        text-decoration: none;
       }
-
+      div.square {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      div.circle {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        border-radius: 50%;
+      }
+      * {
+        border-bottom: 10px solid black;
+      }
     </style>
   </head>
   <body>
+    <div class="square"></div>
+    <div class="circle"></div>
+
     <a id="top"></a>
     <div>
       <h1 class="yael">A <span class="larger">heading</span></h1>
