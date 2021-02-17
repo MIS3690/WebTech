@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        background-color: cornsilk;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      form div {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form Demo</h1>
+    <form method="post" action="mailto:zli@babson.edu">
+      <div>
+        <label for="username">Username: </label>
+        <input
+          type="text"
+          id="username"
+          name="usrname"
+          placeholder="Please enter your name"
+        />
+      </div>
+      <div>
+        <label for="password">Password: </label>
+        <input
+          type="password"
+          id="password"
+          name="pswd"
+          placeholder="Please enter your password"
+        />
+      </div>
+      <div>
+        Gender:
+        <label
+          >Male
+          <input type="radio" name="gender" value="male" />
+        </label>
+        <label
+          >Female
+          <input type="radio" name="gender" value="female" />
+        </label>
+      </div>
+      <div>
+        <div>
+          <label for="state-select">Which state do you live in?</label>
+        </div>
+        <div>
+          <select name="state" id="state-select">
+            <option value="">-- Please select your state --</option>
+            <option value="ME">Maine</option>
+            <option value="MA">Massachusetts</option>
+            <option value="NH">New Hampshire</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div>
+          <label for="comments">Leave a Reply:</label>
+        </div>
+        <div>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="5"
+            cols="25"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+      </div>
+      <!-- <input type="submit" value="SUBMIT" />
+      <input type="reset" value="CLEAR" /> -->
+      <button>Done</button>
+    </form>
+  </body>
+</html>
