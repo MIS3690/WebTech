@@ -8,7 +8,45 @@
   <body>
     <h1>Manipulating Styles and Images</h1>
     <div>
-      <img src="images/tiger1.jpg" alt="Tiger 1" title="Tiger is walking" width="400" />
+      <img
+        src="images/tiger1.jpg"
+        alt="Tiger 1"
+        title="Tiger is walking"
+        width="400"
+        id="tiger1"
+      />
     </div>
+
+    <script>
+      function enlargeImage() {
+        console.log("Testing...");
+        // We are now implementing the enlarging functionality
+        // We will be writing Pseudo-code first (required/recommended)
+        /*
+           1. "get" the image ✅ 
+            - select the element (by id, tagname)
+            - assign the element to a variable
+           2. "get" the size of the image ✅
+            - get the width, assign it to another variable, w
+           3. change the size ✅
+            - increase the variable, w, to another value (assign another value to w)
+            - assign the value of w back to width of the image
+        */
+
+        let tigerImage = document.getElementById("tiger1");
+        // console.log(tigerImage.width);
+
+        let w = tigerImage.width;
+
+        w = w * 1.5;
+        tigerImage.width = w;
+        // console.log(tigerImage.width);
+      }
+
+      // document.getElementById("tiger1").onmouseover  = enlargeImage;
+      document.getElementById("tiger1").onmouseover = function () {
+        enlargeImage();
+      };
+    </script>
   </body>
 </html>
