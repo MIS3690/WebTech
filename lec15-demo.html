@@ -5,14 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Demo</title>
+    <style>
+      div {
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
   <body>
     <p>x = <span id="x-span">2022</span></p>
     <p>y = <span id="y-span">310</span></p>
     <p>result = <span id="result-span">?</span></p>
-    <button id="calc-btn">Calculate</button>
-    <button id="add-btn">Add</button>
+    <div>
+      <button id="calc-btn">Calculate</button>
+      <button id="add-btn">Add</button>
+    </div>
+    <div>
+      <button id="ask-btn">Ask</button>
+    </div>
+    <p>Computer's message: <span id="message"></span></p>
+    <img src="" alt="" id="img1" width="200" />
     <script>
+      function ask() {
+        let userInput = prompt("What is your gender?");
+        console.log(userInput);
+
+        let msg = document.getElementById("message");
+        let msgImg = document.getElementById("img1");
+
+        if (userInput == "male" || userInput == "man") {
+          msg.innerText = "How are you, sir?";
+          msgImg.src = "images/elephant.jpg";
+        } else if (userInput == "female") {
+          msg.innerText = "How are you, madam?";
+          msgImg.src = "images/tiger1.jpg";
+        } else {
+          msg.innerText = "OK. I did not get your gender.";
+          msgImg.src = "";
+        }
+      }
+
+      document.getElementById("ask-btn").onclick = function () {
+        ask();
+      };
+
       document.getElementById("calc-btn").onclick = function () {
         calculate();
       };
@@ -45,6 +80,7 @@
         let r = document.getElementById("result-span");
         r.innerText = result;
       }
+
       document.getElementById("add-btn").onclick = function () {
         // add(2021, 310);
 
