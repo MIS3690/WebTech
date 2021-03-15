@@ -16,9 +16,27 @@
         id="tiger1"
       />
     </div>
+    <div>
+      <img
+        src="images/tiger2.jpg"
+        alt="Tiger 2"
+        title="Tiger is watching you "
+        width="400"
+        id="tiger2"
+      />
+    </div>
+    <div>
+      <img
+        src="images/tiger3.jpg"
+        alt="Tiger 3"
+        title="Tiger is looking somewhere else "
+        width="400"
+        id="tiger3"
+      />
+    </div>
 
     <script>
-      function enlargeImage() {
+      function enlargeImage(imageID) {
         console.log("Testing...");
         // We are now implementing the enlarging functionality
         // We will be writing Pseudo-code first (required/recommended)
@@ -33,7 +51,7 @@
             - assign the value of w back to width of the image
         */
 
-        let tigerImage = document.getElementById("tiger1");
+        let tigerImage = document.getElementById(imageID);
         // console.log(tigerImage.width);
 
         let w = tigerImage.width;
@@ -43,9 +61,36 @@
         // console.log(tigerImage.width);
       }
 
+      function revertSize(imageID) {
+        let tigerImage = document.getElementById(imageID);
+        // console.log(tigerImage.width);
+
+        let w = tigerImage.width;
+
+        w = w / 1.5;
+        tigerImage.width = w;
+      }
+
       // document.getElementById("tiger1").onmouseover  = enlargeImage;
       document.getElementById("tiger1").onmouseover = function () {
-        enlargeImage();
+        enlargeImage("tiger1");
+      };
+
+      document.getElementById("tiger2").onmouseover = function () {
+        enlargeImage("tiger2");
+      };
+      document.getElementById("tiger3").onmouseover = function () {
+        enlargeImage("tiger3");
+      };
+
+      document.getElementById("tiger1").onmouseout = function () {
+        revertSize("tiger1");
+      };
+      document.getElementById("tiger2").onmouseout = function () {
+        revertSize("tiger2");
+      };
+      document.getElementById("tiger3").onmouseout = function () {
+        revertSize("tiger3");
       };
     </script>
   </body>
