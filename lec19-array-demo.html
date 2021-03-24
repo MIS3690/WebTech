@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="post" id="my-form">
+      <label><input type="radio" name="colors" value="red" />Red</label>
+      <label><input type="radio" name="colors" value="blue" />Blue</label>
+      <label><input type="radio" name="colors" value="yellow" />Yellow</label>
+      <label><input type="radio" name="colors" value="green" />Green</label>
+      <label><input type="radio" name="colors" value="brown" />Brown</label>
+      <input type="button" value="Select" id="select-btn" />
+    </form>
+    <script>
+      function selectColor() {
+        // console.log("...starting here...");
+        // console.log("");
+
+        // for (let i = 0; i < 5; i++) {
+        //   console.log("i:", i);
+        //   if (i === 3) {
+        //     console.log("We found 3!");
+        //   } else {
+        //     console.log("...not this time...");
+        //   }
+
+        //   console.log("");
+        // }
+        const myform = document.getElementById("my-form");
+        const colors = myform["colors"];
+
+        for (let i = 0; i < colors.length; i = i + 1) {
+          // Adding the following 3 lines of helper console.log is always recommmended to beginners!
+          console.log("i:", i);
+          console.log(colors[i]);
+          console.log("Is this button checked: ", colors[i].checked);
+
+          if (colors[i].checked) {
+            let userChoice = colors[i].value;
+            console.log("You selected", userChoice);
+            document.querySelector("body").style.backgroundColor = userChoice;
+          } else {
+            console.log("... not this color...");
+          }
+
+          console.log("");
+        }
+
+        console.log("finished for loop...");
+      }
+
+      document.getElementById("select-btn").onclick = selectColor;
+    </script>
+  </body>
+</html>
