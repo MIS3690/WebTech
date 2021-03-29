@@ -8,7 +8,11 @@
   </head>
   <body>
     <h1>Demo for Array and <code>for</code> loop</h1>
-    <h4>Sum up all the integers from 1 to 100</h4>
+    <!-- <h4>
+      Sum up all the square of integers from 1 to 100, i.e. 1*1 + 2*2 + 3*3 +
+      ... + 100*100
+    </h4> -->
+    <h4>Sum up all the odd numbers from 1 to 100, i.e. 1 + 3 + 5 +...+99</h4>
     <button>Calculate</button>
     <p id="result"></p>
 
@@ -16,7 +20,30 @@
       function calc() {
         console.log("... get started...");
 
-        let result = 1 + 2 + 3 + 4 + 5 + 6 + 7;
+        // let result = 1 + 2 + 3 + 4 + 5 + 6 + 7;
+
+        let result = 0;
+        console.log("Currently sum is 0.");
+
+        // for (let i = 1; i < 101; i = i + 2) {
+        //   console.log("In iteration " + i + ": ");
+        //   //   result = result + i * i;
+        //   result += i;
+        //   console.log("we added " + i + ", the sum becomes " + result);
+        //   console.log("");
+        // }
+
+        for (let i = 1; i < 101; i++) {
+          console.log("In iteration " + i + ": ");
+          if (i % 2 === 1) {
+            result += i;
+            console.log("we added " + i + ", the sum becomes " + result);
+            console.log("");
+          } else {
+            console.log("we did not add " + i + ", the sum is still " + result);
+            console.log("");
+          }
+        }
 
         document.getElementById("result").innerText = result;
       }
