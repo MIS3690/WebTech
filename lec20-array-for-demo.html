@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo for Array and for loop</title>
+  </head>
+  <body>
+    <h1>Demo for Array and <code>for</code> loop</h1>
+    <h4>Sum up all the integers from 1 to 100</h4>
+    <button>Calculate</button>
+    <p id="result"></p>
+
+    <script>
+      function calc() {
+        console.log("... get started...");
+
+        let result = 1 + 2 + 3 + 4 + 5 + 6 + 7;
+
+        document.getElementById("result").innerText = result;
+      }
+      document.querySelector("button").onclick = calc;
+    </script>
+  </body>
+</html>
