@@ -38,16 +38,59 @@
           if (i % 2 === 1) {
             result += i;
             console.log("we added " + i + ", the sum becomes " + result);
-            console.log("");
           } else {
             console.log("we did not add " + i + ", the sum is still " + result);
-            console.log("");
           }
+          console.log("");
         }
 
         document.getElementById("result").innerText = result;
       }
-      document.querySelector("button").onclick = calc;
+
+      function doSomething() {
+        console.log("get started...");
+        const names = [
+          "Aiden",
+          "Alexander",
+          "Alejandra",
+          "Andrew",
+          "Adelaida",
+          "Brandon",
+          "Christine",
+          "Emily",
+          "Gavin",
+          "Jonathan",
+          "Julia",
+          "Kerim",
+          "Logan",
+          "Mengyu",
+          "Maddy",
+          "Noah",
+          "Nicole",
+          "Motolani",
+          "Rosalia",
+          "Siqi",
+          "Samuel",
+          "William",
+          "Yael",
+          "Zihou",
+        ];
+
+        // const n = names.length;
+        // const randIndex = Math.floor(Math.random() * n); // the range is [0, length-1]
+        // const randName = names[randIndex];
+        // console.log(randName);
+        for (let i = 0; i < names.length; i++) {
+          console.log(names[i]);
+          //   let line = "<p>" + names[i] + "<P>";
+          let line =
+            names[i] + ": " + (60 + Math.floor(Math.random() * 40)) + "<br>";
+          document.getElementById("result").innerHTML += line; // concatenate withour replacing
+
+          // TODO: check out using HTML entity for new lines
+        }
+      }
+      document.querySelector("button").onclick = doSomething;
     </script>
   </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex18</title>
+  </head>
+  <body>
+    <img id="tiger" />
+
+    <script>
+      const slides = [
+        "images/tiger1.jpg",
+        "images/tiger2.jpg",
+        "images/tiger3.jpg",
+        "images/tiger4.jpg",
+      ];
+      let i = 0; // a global variable
+
+      function slideShow() {
+        let tigerImage = document.getElementById("tiger");
+        if (i === slides.length) {
+          i = 0;
+        }
+        tigerImage.src = slides[i];
+        i++;
+        setTimeout(slideShow, 2000);
+      }
+
+      // document.addEventListener("DOMContentLoaded", slideShow);
+      document.querySelector("body").onload = slideShow;
+    </script>
+  </body>
+</html>

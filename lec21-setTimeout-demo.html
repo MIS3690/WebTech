@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout Demo</title>
+  </head>
+  <body>
+    <h1><code>setTimeout</code> Demo</h1>
+    <button>Check it out</button>
+
+    <div id="result"></div>
+
+    <script>
+      let counter = 10; // now counter is a global variable
+      function doSomething() {
+        // we want it to stop at some point
+        if (counter > 0) {
+          document.getElementById("result").innerHTML +=
+            "<p>..." + counter + "</p>";
+
+          counter--;
+          setTimeout(doSomething, 500);
+        } else {
+          document.getElementById("result").innerHTML += "<p>...Lift off!</p>";
+        }
+      }
+      document.querySelector("button").onclick = doSomething;
+    </script>
+  </body>
+</html>
