@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Digital Clock</title>
+  </head>
+  <body>
+    <h1>A Simple Digital Clock</h1>
+    <p id="clock"></p>
+
+    <script>
+      function showTime() {
+        console.log("...get started...");
+        // show current time
+
+        const now = new Date();
+        const hour = now.getHours();
+        let minute = now.getMinutes();
+        if (minute < 10) {
+          minute = "0" + minute;
+        }
+        let second = now.getSeconds();
+        if (second < 10) {
+          second = "0" + second;
+        }
+        document.getElementById("clock").innerText =
+          hour + ":" + minute + ":" + second;
+
+        setTimeout(showTime, 1000);
+      }
+
+      document.querySelector("body").onload = showTime;
+    </script>
+  </body>
+</html>
