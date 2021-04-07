@@ -1,5 +1,6 @@
 /* Psuedo-Code
 
+create a global variable: start 
 
 makeShape() - generate a random shape, and display it on the screen, get the start time
     1. create shape
